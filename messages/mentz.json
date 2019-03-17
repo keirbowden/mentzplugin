@@ -1,0 +1,6 @@
+{
+  "commandDescription": "publishes a solution, optionally asking for mentor feedback",
+  "commentFlagDescription": "optional comment regarding the solution",
+  "fileFlagDescription": "file containing the solution",
+  "mentorFlagDescription": "request mentor feedback"
+}

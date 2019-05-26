@@ -59,6 +59,9 @@ export default class Org extends SfdxCommand {
       VersionData : string
     }
     let challenge=fs.readFileSync('CHALLENGE');
+    challenge=String(challenge);
+    challenge=challenge.substring(0, challenge.length-1);
+
     let descrip=challenge + ' ' + (mentor?'Mentoring':'Solutions');
 
     let solution=fs.readFileSync(filepath);

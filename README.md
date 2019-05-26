@@ -13,7 +13,7 @@ Solution publishing plugin for the Mentz community mentoring concept.
 [![License](https://img.shields.io/npm/l/mentz.svg)](https://github.com/keirbowden/mentzplugin/blob/master/package.json)
 
 <!-- toc -->
-* [Debugging your plugin](#debugging-your-plugin)
+
 <!-- tocstop -->
 <!-- install -->
 <!-- usage -->
@@ -22,7 +22,7 @@ $ npm install -g mentz
 $ mentz COMMAND
 running command...
 $ mentz (-v|--version|version)
-mentz/0.0.0 darwin-x64 node-v11.10.1
+mentz/0.9.1beta darwin-x64 node-v8.11.3
 $ mentz --help [COMMAND]
 USAGE
   $ mentz COMMAND
@@ -57,5 +57,5 @@ EXAMPLES
      Requested mentoring for the solution for CHALLENGE 1
 ```
 
-_See code: [src/commands/mentz/publish.ts](https://github.com/keirbowden/mentzplugin/blob/v0.0.0/src/commands/mentz/publish.ts)_
+_See code: [src/commands/mentz/publish.ts](https://github.com/keirbowden/mentzplugin/blob/v0.9.1beta/src/commands/mentz/publish.ts)_
 <!-- commandsstop -->

@@ -4,41 +4,23 @@ mentz
 Solution publishing plugin for the Mentz community mentoring concept.
 
 [![Version](https://img.shields.io/npm/v/mentz.svg)](https://npmjs.org/package/mentz)
-[![CircleCI](https://circleci.com/gh/keirbowden/mentzplugin/tree/master.svg?style=shield)](https://circleci.com/gh/keirbowden/mentzplugin/tree/master)
-[![Appveyor CI](https://ci.appveyor.com/api/projects/status/github/keirbowden/mentzplugin?branch=master&svg=true)](https://ci.appveyor.com/project/heroku/mentzplugin/branch/master)
-[![Codecov](https://codecov.io/gh/keirbowden/mentzplugin/branch/master/graph/badge.svg)](https://codecov.io/gh/keirbowden/mentzplugin)
-[![Greenkeeper](https://badges.greenkeeper.io/keirbowden/mentzplugin.svg)](https://greenkeeper.io/)
-[![Known Vulnerabilities](https://snyk.io/test/github/keirbowden/mentzplugin/badge.svg)](https://snyk.io/test/github/keirbowden/mentzplugin)
 [![Downloads/week](https://img.shields.io/npm/dw/mentz.svg)](https://npmjs.org/package/mentz)
 [![License](https://img.shields.io/npm/l/mentz.svg)](https://github.com/keirbowden/mentzplugin/blob/master/package.json)
 
-<!-- toc -->
-
-<!-- tocstop -->
-<!-- install -->
-<!-- usage -->
+# Installation
 ```sh-session
-$ npm install -g mentz
-$ mentz COMMAND
-running command...
-$ mentz (-v|--version|version)
-mentz/0.9.1beta darwin-x64 node-v8.11.3
-$ mentz --help [COMMAND]
-USAGE
-  $ mentz COMMAND
-...
+$ sfdx plugins:install mentz
 ```
-<!-- usagestop -->
-<!-- commands -->
-* [`mentz mentz:publish [FILE]`](#mentz-mentzpublish-file)
+# Commands
+* [sfdx mentz:publish [FILE]`](#mentz-mentzpublish-file)
 
-## `mentz mentz:publish [FILE]`
+## `sfdx mentz:publish [FILE]`
 
 publishes a solution, optionally asking for mentor feedback
 
 ```
 USAGE
-  $ mentz mentz:publish [FILE]
+  $ sfdx mentz:publish [FILE]
 
 OPTIONS
   -c, --comment=comment                           optional comment regarding the solution
@@ -57,5 +39,5 @@ EXAMPLES
      Requested mentoring for the solution for CHALLENGE 1
 ```
 
-_See code: [src/commands/mentz/publish.ts](https://github.com/keirbowden/mentzplugin/blob/v0.9.1beta/src/commands/mentz/publish.ts)_
-<!-- commandsstop -->
+# License
+MIT

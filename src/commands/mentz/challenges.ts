@@ -178,6 +178,11 @@ Done`
         message='No challenge groups found found';
       }
     }
+    else {
+      this.ux.log('No challenge groups found');
+      success=false;
+      message='No challenge groups found found';
+  }
     
     this.ux.log('Done');
 

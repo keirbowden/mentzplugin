@@ -1,0 +1,4 @@
+{
+  "commandDescription": "select from available challenges that have not yet been taken",
+  "allFlagDescription": "show all challenges"
+}

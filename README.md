@@ -12,10 +12,10 @@ Solution publishing plugin for the Mentz community mentoring concept.
 $ sfdx plugins:install mentz
 ```
 # Commands
-* [sfdx mentz:publish [FILE]`](#mentz-mentzpublish-file)
+* [sfdx mentz:publish [FILE]](#sfdx-mentzpublish-file)
+* [sfdx mentz:challenges](#sfdx-mentzchallenges)
 
 ## `sfdx mentz:publish [FILE]`
-
 publishes a solution, optionally asking for mentor feedback
 
 ```
@@ -38,6 +38,49 @@ EXAMPLES
   $ sfdx mentz:publish --targetusername myOrg@example.com --mentor -f src/classes/Solution.cls
      Requested mentoring for the solution for CHALLENGE 1
 ```
+
+## `sfdx mentz:challenges`
+
+lists available challenges for the user to select from and clones the repository for the selected challenge
+into a subdirectory
+
+```
+USAGE
+  $ sfdx mentz:challenges
+
+OPTIONS
+  -u, --targetusername=targetusername             username or alias for the target org; overrides default target org
+  -a, --all                                       list all challenges, including those already completed
+  --apiversion=apiversion                         override the api version used for api requests made by this command
+  --json                                          format output as json
+  --loglevel=(trace|debug|info|warn|error|fatal)  logging level for this command invocation
+
+EXAMPLES
+$ sfdx mentz:challege --targetusername myOrg@example.com 
+  Select a challenge
+
+1) COLLECTION SIMPLE 1
+0) Quit
+Choose a challenge: 1
+Chosen = 1
+Cloning repository = https://github.com/mentzbb/SimpleCollections1
+ ...
+Done
+
+  $ sfdx mentz:publish --targetusername myOrg@example.com --all
+  Select a challenge
+
+1) COLLECTION SIMPLE 1
+2) CONDITIONAL SIMPLE 1 (Completed)
+0) Quit
+Choose a challenge: 1
+Chosen = 1
+Cloning repository = https://github.com/mentzbb/SimpleCollections1
+ ...
+Done
+```
+
+
 
 # License
 MIT

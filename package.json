@@ -1,7 +1,7 @@
 {
   "name": "mentz",
   "description": "Solution publishing plugin for the Mentz community mentoring concept.",
-  "version": "0.9.3beta",
+  "version": "1.0.0",
   "author": "Keir Bowden",
   "bugs": "https://github.com/keirbowden/mentzplugin/issues",
   "dependencies": {

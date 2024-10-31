@@ -1,5 +1,6 @@
 import {core, flags, SfdxCommand} from '@salesforce/command';
 import {AnyJson} from '@salesforce/ts-types';
+import { basename } from 'path';
 
 // Initialize Messages with the current plugin directory
 core.Messages.importMessagesDirectory(__dirname);
@@ -45,7 +46,7 @@ export default class Org extends SfdxCommand {
     const filepath=this.flags.file || '';
 
     if (''===filepath) {
-      this.ux.error('Missing solution file (-f)');
+      this.ux.error('Missing solution file(s) (-f)');
       process.exit(-1);
     }
 
@@ -63,11 +64,24 @@ export default class Org extends SfdxCommand {
     challenge=challenge.substring(0, challenge.length-1);
 
     let descrip=challenge + ' ' + (mentor?'Mentoring':'Solutions');
+    let solution='';
+    let filepaths=filepath.split(',');
+    if (filepaths.length>1) {
+      for (let fp of filepaths) {
+        let fname=basename(fp);
+        solution+='\n----------------------------\n';
+        solution+=fname + '\n';
+        solution+='----------------------------\n\n';
+        solution+=fs.readFileSync(fp);
+      }
+    }
+    else {
+      solution=fs.readFileSync(filepath);
+    }
 
-    let solution=fs.readFileSync(filepath);
     let solutionB64=Buffer.from(solution).toString('base64');
     let instance : ContentVersion;
-    instance={"Title": 'solution.cls',
+    instance={"Title": 'solution.txt',
               "Description": descrip + ':' + comment,
               "PathOnClient":'/Solution.txt',
               "VersionData":solutionB64};    
